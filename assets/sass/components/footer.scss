@@ -1,0 +1,48 @@
+.Footer {
+    p {
+        margin-bottom: 20px;
+    }
+    .Section-container {
+        overflow: hidden;
+    }
+}
+
+.Footer-list {
+    float: left;
+    width: 250px;
+    @include mq($until: 500px) {
+        float: none;
+        & + & {
+            margin-top: 30px;
+        }
+    }
+}
+.Footer-list--elsewhere {
+    width: 200px;
+}
+.Footer-item {
+    font-size: 15px;
+    margin-bottom: 4px; 
+    * {
+        color: #fff;
+    }
+    &:first-child {
+        margin-bottom: 8px;
+    }
+}
+.Footer-coda {
+    margin-top: 30px;
+    clear: both;
+    background: rgba(0,0,0,0.2);
+    font-size: 12px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    p {
+        margin-bottom: 0;
+        color: #888;
+    }
+    a {
+        color: #888;
+        text-decoration: underline;
+    }
+}

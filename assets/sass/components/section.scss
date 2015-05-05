@@ -1,0 +1,170 @@
+.Section {
+    padding: 40px 0 70px 0;
+    background-color: #fff;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+.Section-container {
+    color: #ddd;
+    color: rgba(255,255,255,0.7);
+}
+ .Section-title {
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 20px;
+ }
+.Section-aside {
+    img {
+        width: 120px;
+        height: 120px;
+        border-radius: 100%;
+        @include mq($from: large) {
+            width: 170px;
+            height: 170px;
+        }
+    }
+    @include mq($until: medium) {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 25px;
+        margin-top: -15px;
+    }
+}
+ 
+.Section--aside {
+    overflow: hidden;
+    @include mq($from: medium, $until: large) {
+        .Section-aside {
+            float: right;
+            margin: -10px 0 10px 20px;
+            position: relative;
+            shape-outside: circle(50%);
+        }
+    }
+    @include mq($from: large) {
+        .Section-content {
+            padding-left: 200px;
+        }
+        .Section-text {
+            width: 100%;
+            float: right;
+        }
+        .Section-aside {
+            width: 170px;
+            margin-left: -200px;
+            float: left;
+        }
+    }
+}
+.Section--asideAlt {
+    overflow: hidden;
+     @include mq($from: medium, $until: large) {
+        .Section-aside {
+            float: right;
+            margin: -10px 0 10px 20px;
+            position: relative;
+            shape-outside: circle(50%);
+        }
+    }
+    @include mq($from: large) {
+        .Section-content {
+            padding-right: 200px;
+        }
+        .Section-text {
+            width: 100%;
+            float: left;
+        }
+        .Section-aside {
+            width: 170px;
+            float: right;
+            margin-right: -200px;
+        }
+    }
+}
+
+.Section--header {
+    padding-top: 30%;
+    padding-bottom: 0;
+    background-color: $color-block-brown;
+    background-image: url('/assets/img/sarah-perkins-national-100km-champs-small.jpg');
+    background-size: cover;
+    background-position: top right;
+    @include mq($from: 500px) {
+        background-image: url('/assets/img/sarah-perkins-national-100km-champs-medium.jpg');
+    }
+    @include mq($from: 900px) {
+        background-image: url('/assets/img/sarah-perkins-national-100km-champs-large.jpg');
+        padding-top: 270px;
+    }
+    .Section-containerBranding {
+        padding-top: 250px;
+        background: rgba(0,0,0,0.3);
+        padding: 20px 0 23px 0;
+    }
+}
+.Section--intro {
+    background-color: $color-block-purple;
+    padding-top: 30px;
+}
+
+.Section--trainingplans {
+    background-color: $color-block-green;
+    margin-top: -40px;
+    transform: rotate(1.5deg);
+    .Section-container {
+        transform: rotate(-1.5deg);
+    }
+}
+
+.Section--groups {
+    background-color: $color-block-indigo;
+    margin-top: -40px;
+    transform: rotate(-1.5deg);
+    overflow: hidden;
+    .Section-container {
+        transform: rotate(1.5deg);
+    }
+
+}
+
+.Section--about {
+    background-color: $color-block-blue;
+    margin-top: -40px;
+    transform: rotate(1.5deg);
+    overflow: hidden;
+    .Section-container {
+        transform: rotate(-1.5deg);
+    }
+    padding-bottom: 70px;
+}
+
+.Section--footer {
+    background-color: $color-block-brown;
+    padding-bottom: 0;
+    margin-top: -40px;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.Section-text {
+    .lede {
+        font-size: 19px;
+        color: #eee;
+        color: rgba(255,255,255,0.9);
+        @include mq($until: medium) {
+            font-size: 17px;
+        }
+    }
+    p {
+        margin-bottom: 1em;
+    }
+    a {
+        // color: #fff;
+        color: #eee;
+        color: rgba(255,255,255,0.9);
+        text-decoration: underline;
+    }
+}
