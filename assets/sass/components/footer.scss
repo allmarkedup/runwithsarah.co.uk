@@ -30,6 +30,19 @@
         margin-bottom: 8px;
     }
 }
+.Footer-logos {
+    float: right;
+    width: 200px;
+    img {
+        width: 100%;
+        opacity: 0.2;
+    }
+    @include mq($until: 800px) {
+        float: none;
+        clear: both;
+        padding-top: 30px;
+    }
+}
 .Footer-coda {
     margin-top: 30px;
     clear: both;
