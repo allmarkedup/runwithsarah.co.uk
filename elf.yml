@@ -2,5 +2,5 @@ repository: git@github.com:allmarkedup/runwithsarah.co.uk.git
 
 deploy:
   branch: master
-  server: # example.clearleft.host
-  domain: # example.clearleft.com
+  server: general.servers.allmarkedup.com
+  domain: runwithsarah.co.uk
