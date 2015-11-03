@@ -5,3 +5,7 @@ composer.phar
 npm-debug.log
 .sass-cache
 /public/assets
+craft/storage/runtime/*
+craft/storage/backups/*
+craft/storage/userphotos/*
+!craft/storage/userphotos/__default__

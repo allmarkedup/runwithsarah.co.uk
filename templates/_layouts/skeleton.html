@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, maximum-scale=1">
+    <title>Sarah Perkins | Running coaching for individuals and groups in Brighton and Hove</title>
+    <script type="text/javascript">
+        WebFontConfig = {
+            google: { families: [ 'Lora:400,700,400italic:latin', 'Raleway:600,800:latin' ] }
+        };
+        (function() {
+            var wf = document.createElement('script');
+            wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+              '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+            wf.type = 'text/javascript';
+            wf.async = 'true';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(wf, s);
+        })();
+    </script>
+    <link rel="stylesheet" href="/assets/css/all.css">
+</head>
+<body class="vcard">
+
+{% block body %}{% endblock %}
+
+    <footer class="Footer Section Section--footer">
+    <div class="Section-container receptacle">
+        <ul class="Footer-list Footer-list--elsewhere">
+            <li class="Footer-item">Find me elsewhere: </li>
+            <li class="Footer-item"><a class="Footer-link" rel="me" href="https://facebook.com/runwithsarah">Facebook</a></li>
+            <li class="Footer-item"><a class="Footer-link" rel="me" href="https://twitter.com/sarahjacob">Twitter</a></li>
+            <li class="Footer-item"><a class="Footer-link" rel="me" href="https://instagram.com/runwithsarah">Instagram</a></li>
+            <li class="Footer-item"><a class="Footer-link" rel="me" href="https://strava.com/athletes/sarahperkins">Strava</a></li>
+        </ul>    
+        <ul class="Footer-list Footer-list--contact">
+            <li class="Footer-item">Get in touch:</li>
+            <li class="Footer-item">Email: <a class="Footer-link email" href="mailto:hello@runwithsarah.co.uk">hello@runwithsarah.co.uk</a></li>
+            <li class="Footer-item">Tel: <span class="tel">07787 332 800</span></li>
+        </ul>
+        <div class="Footer-logos">
+            <a href="http://profeet.co.uk"><img class="Footer-logo Footer-logo--profeet" src="/assets/img/profeet.png" alt="Profeet Logo"></a>
+            <a href="http://www.britishathletics.org.uk"><img class="Footer-logo Footer-logo--uka" src="/assets/img/uka.png" alt="UK Athletics Logo"></a>
+        </div>
+    </div>
+
+    {% block coda %}{% endblock %}
+
+</footer>
+
+</body>
+</html>

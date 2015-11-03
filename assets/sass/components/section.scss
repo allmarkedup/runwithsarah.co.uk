@@ -1,5 +1,5 @@
 .Section {
-    padding: 40px 0 70px 0;
+    padding: 50px 0 110px 0;
     background-color: #fff;
     position: relative;
     z-index: 1;
@@ -112,31 +112,31 @@
 
 .Section--trainingplans {
     background-color: $color-block-green;
-    margin-top: -40px;
-    transform: rotate(1.5deg);
+    margin-top: -70px;
+    transform: skewY(2deg);
     .Section-container {
-        transform: rotate(-1.5deg);
+        transform: skewY(-2deg);
     }
 }
 
 .Section--groups {
     background-color: $color-block-indigo;
-    margin-top: -40px;
-    transform: rotate(-1.5deg);
+    margin-top: -70px;
+    transform: skewY(-2deg);
     overflow: hidden;
     .Section-container {
-        transform: rotate(1.5deg);
+        transform: skewY(2deg);
     }
 
 }
 
 .Section--about {
     background-color: $color-block-blue;
-    margin-top: -40px;
-    transform: rotate(1.5deg);
+    margin-top: -70px;
+    transform: skewY(2deg);
     overflow: hidden;
     .Section-container {
-        transform: rotate(-1.5deg);
+        transform: skewY(-2deg);
     }
     padding-bottom: 70px;
 }
@@ -167,5 +167,97 @@
         color: #eee;
         color: rgba(255,255,255,0.9);
         text-decoration: underline;
+    }
+}
+
+.Section--clientAreaHeader {
+    background-color: $color-block-purple;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.Section--clientArea {
+    background-color: #fff;
+    padding: 20px 0 20px 0;
+    .Section-container {
+        color: #333;
+    }
+    .Section-title {
+        color: #333;
+        text-transform: none;
+    }
+    p {
+        margin-bottom: 1em;
+    }
+    a {
+        color: #eee;
+        color: rgba(255,255,255,0.9);
+        text-decoration: underline;
+    }
+     @include mq($from: large) {
+        .Section-container {
+            padding-right: 250px;
+        }
+        .Section-main {
+            width: 100%;
+            float: left;
+        }
+        .Section-sidebar {
+            width: 230px;
+            float: right;
+            margin-right: -250px;
+        }
+    }
+}
+
+.Section--clientAreaIntro {
+    background-color: #ddd;
+    background-color: $color-block-green;
+    padding-bottom: 90px;
+    .Section-title, p {
+        color: #fff;
+        color: rgba(255,255,255,0.8);   
+     }
+}
+
+.Section--clientAreaFiles {
+    padding: 60px 0 110px 0;
+     // background-color: $color-block-green;
+    margin-top: -67px;
+    transform: skewY(1deg);
+    transform-origin: top left;
+    .Section-container {
+        transform: skewY(-1deg);
+    }
+}
+
+.Section--clientAreaFooter {
+    background-color: $color-block-blue;
+    margin-top: -70px;
+    transform: skewY(-1deg);
+    overflow: hidden;
+    .Section-container {
+        transform: skewY(1deg);
+    }
+    padding-bottom: 70px;
+    img {
+        max-width: 130px;
+        max-height: 130px;
+    }
+    .Section-title {
+        font-size: 16px;
+    }
+    @include mq($from: large) {
+        .Section-content {
+            padding-right: 160px;
+        }
+        .Section-text {
+            width: 100%;
+        }
+        .Section-aside {
+            width: 130px;
+            margin-right: -160px;
+            margin-top: -10px;
+        }
     }
 }

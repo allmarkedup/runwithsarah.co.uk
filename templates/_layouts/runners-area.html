@@ -1,0 +1,23 @@
+{% extends '_layouts/skeleton.html' %}
+
+{% block body %}
+
+<div class="ClientArea">
+    
+    <header class="Section Section--clientAreaHeader ClientArea-header">
+        <div class="Section-container receptacle">
+            <h1 class="ClientArea-title">Your Runner's Area</h1>
+            {% if currentUser %}
+            <ul class="ClientArea-nav">
+                {# <li><a href="/runners-area">Your plan and files</a></li> #}
+                <li><a href="{{ craft.config.logoutPath }}">Log out</a></li>
+            </ul>
+            {% endif %}
+        </div>
+    </header>
+
+    {% block content %}{% endblock %}
+    
+</div>
+
+{% endblock %}

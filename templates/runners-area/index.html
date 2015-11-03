@@ -1,0 +1,73 @@
+{% requireLogin %}
+{% extends '_layouts/runners-area.html' %}
+
+{% block content %}
+
+    <div class="Section Section--clientArea Section--clientAreaIntro">
+        <div class="Section-container receptacle">
+
+            <div class="ClientArea-intro">
+                <h2 class="Section-title">Hi {{ currentUser.friendlyName }},</h2>
+                <p>Welcome to your runner's area. This is where you can find and download your most recent training plan as well as any other files that I've shared with you.</p>    
+            </div>
+
+        </div>
+    </div>
+
+    <div class="Section Section--clientArea Section--clientAreaFiles">
+        <div class="Section-container receptacle">
+
+            <div class="ClientArea-fileList">
+                <h3 class="ClientArea-fileListTitle">Your files</h3>
+                <ul class="ClientArea-fileListItems">
+                    <li class="ClientArea-fileListItem ClientArea-fileListItemPlan">
+                        <a class="ClientArea-fileLink" href="#">
+                        <h4 class="ClientArea-fileName">Training Plan</h4>
+                        <p class="ClientArea-fileDescription">This is your latest training plan.</p>
+                        </a>
+                    </li>
+                    <li class="ClientArea-fileListItem ClientArea-fileListItemPlan">
+                        <a class="ClientArea-fileLink" href="#">
+                            <h4 class="ClientArea-fileName">Year Planner</h4>
+                            <p class="ClientArea-fileDescription">An overview of this year's race schedule and training blocks.</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="ClientArea-fileList">
+                <h3 class="ClientArea-fileListTitle">Other useful stuff</h3>
+                <ul class="ClientArea-fileListItems">
+                    <li class="ClientArea-fileListItem ClientArea-fileListItemFile">
+                        <a class="ClientArea-fileLink" href="#">
+                        <h4 class="ClientArea-fileName">Stretching</h4>
+                        <p class="ClientArea-fileDescription">A quick overview of useful stretches you can try.</p>
+                        </a>
+                    </li>
+                    <li class="ClientArea-fileListItem ClientArea-fileListItemFile">
+                        <a class="ClientArea-fileLink" href="#">
+                        <h4 class="ClientArea-fileName">Dynamic warm ups</h4>
+                        <p class="ClientArea-fileDescription">Some good dynamic warm up exercises to do before your runs.</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="Section Section--clientAreaFooter Section--asideAlt">
+        <div class="Section-container receptacle">
+            <div class="Section-content">
+                <div class="Section-aside">
+                    <img src="/assets/img/sarah.jpg" alt="Photo of Sarah Perkins">
+                </div>
+                <div class="Section-text">
+                    <h2 class="Section-title">Feeling unsure about anything?</h2>
+                    <p>If anything isn't clear in your training plan or other documents then please don't forget you can drop me an email at <a href="mailto:hello@runwithsarah.co.uk">hello@runwithsarah.co.uk</a> or give me a ring on 07787 332 800 at any time.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
