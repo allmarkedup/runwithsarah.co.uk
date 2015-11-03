@@ -1,0 +1,44 @@
+{% extends '_layouts/runners.html' %}
+
+{% block content %}
+
+<div class="Section Section--clientAreaLogin ClientArea-login">
+    <div class="Section-container receptacle">
+
+        <form class="Form" method="post" accept-charset="UTF-8">
+            <div class="Form-inner">
+
+                {{ getCsrfInput() }}
+
+                {% if errorMessage is defined %}
+                <p>{{ errorMessage }}</p>
+                {% endif %}
+
+                <input type="hidden" name="action" value="users/login">
+
+                <div class="Form-input Form-input--text">
+                    <label for="loginName">Username or email</label>
+                    <input id="loginName" type="text" name="loginName" value="{{ craft.session.rememberedUsername }}">
+                </div>
+
+                <div class="Form-input Form-input--text">
+                    <label for="password">Password</label>
+                    <input id="password" type="password" name="password">
+                </div>
+
+                <div class="Form-input Form-input--checkbox">
+                    <input type="checkbox" name="rememberMe" value="1"> <label>Remember me?</label>
+                </div>
+
+                <div class="Form-input Form-input--submit">
+                    <button type="submit">Login</button>
+                </div>
+
+            </div>
+        </form>
+
+        <p class="ClientArea-loginForgot"><a href="{{ url('forgotpassword') }}">Forget your password?</a></p>
+
+    </div>
+</div>
+{% endblock %}

@@ -11,8 +11,8 @@ return array(
     '*' => array(
         'pageTrigger' => 'page/',
         'omitScriptNameInUrls' => true,
-        'loginPath' => 'runners-area/login',
-        'logoutPath' => 'runners-area/logout',
+        'loginPath' => 'runners/login',
+        'logoutPath' => 'runners/logout',
     ),
     '.com' => array(
         'siteUrl' => 'http://runwithsarah.co.uk/',
